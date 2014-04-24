@@ -1,0 +1,23 @@
+{% extends "::layout.html.twig" %}
+{% block body %}
+	<div class="consulter">
+		<table border = '1'>
+		<legend>Liste des étudiants</legend>
+			<tr>
+				<th>Nom</th>
+				<th>Prenom</th>
+				<th>Section</th>
+				<th>Promo</th>
+			</tr>
+			{% for etudiant in etudiants %}
+				<tr>
+					<td>{{ etudiant.nom }}</td>
+					<td>{{ etudiant.prenom }}</td>
+					<td>{{ etudiant.section.libelle }}</td>
+					<td>{{ etudiant.promo.libelle }}</td>
+					<td><a href=""> Voir plus </a></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset="UTF-8" />
+        <title>{% block title %}GESTSTAGES{% endblock %}</title>
+        {% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('css/gestStages.css') }}" type="text/css" />
+		{% endblock %}
+    </head>
+    <body>
+		<header>
+			<h1>GestStages</h1>
+			<p>Bienvenue aux &eacute;tudiants du lyc&eacute;e Jean Rostand</p>
+		</header>
+		
+		<div id="menu">
+			<li><u>&Eacute;tudiants</u></li>
+			<ul>
+				<li><a href="../etudiant/consulter">Liste des &Eacute;tudiants</a></li>
+				<li><a href="../etudiant/ajouter">Ajouter un &Eacute;tudiant</a></li>
+			</ul>
+			<li><u>Stages</u></li>
+			<ul>
+				<li><a href="../stage/consulter">Liste des Stages</a></li>
+				<li><a href="../stage/ajouter">Ajouter un Stage</a></li>
+			</ul>
+			<li><u>Entreprises</u></li>
+			<ul>
+				<li><a href="../entreprise/consulter">Liste des Entreprises</a></li>
+				<li><a href="../entreprise/ajouter">Ajouter une Entreprise</a></li>
+			</ul>
+		</div>
+		<div id="body">
+			{% block body %}{% endblock %}
+		</div>
+    </body>
+	<footer>
+		<p>Lyc&eacute;e Jean Rostand</p>
+	</footer>
+</html>

@@ -1,0 +1,27 @@
+{% extends "::layout.html.twig" %}
+{% block body %}
+	<div class="consulter">
+		<table border = '1'>
+		<legend>R&eacute;sultat de la recherche</legend>
+			<tr>
+				<th>P&eacute;riode</th>
+				<th>Etudiant</th>
+				<th>Entreprise</th>
+				<th>Note</th>
+			</tr>
+			{% for stage in stages %}
+				<tr>
+					{% if stage.DateDebut == null and stage.DateFin == null %}
+						<td>Non Renseign&eacute;e</td>
+					{% else %}
+						<td>{{ stage.DateDebut|date('d/m/Y') }} - {{ stage.DateFin|date('d/m/Y') }}</td>
+					{% endif %}
+					<td>{{ stage.etudiant.nom ~ " " ~ stage.etudiant.prenom }}</td>
+					<td>{{ stage.entreprise.raisonSociale}} <!--</br> {{ stage.entreprise.rue }} </br> {{ stage.entreprise.codePostal }} {{ stage.entreprise.ville }}--></td>
+					<td></td>
+					<td><a href=""> Voir plus </a></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}

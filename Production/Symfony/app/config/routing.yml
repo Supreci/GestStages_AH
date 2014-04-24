@@ -1,0 +1,8 @@
+gest_stages_stage:
+    resource: "@gestStagesStageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+gest_stages_etudiant:
+    resource: "@gestStagesEtudiantBundle/Resources/config/routing.yml"
+    prefix:   /
+

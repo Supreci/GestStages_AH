@@ -1,0 +1,26 @@
+gest_stages_etudiant_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: gestStagesEtudiantBundle:Default:index }
+gest_stages_etudiant_Coucou:
+    pattern:  /coucou
+    defaults: { _controller: gestStagesEtudiantBundle:Etudiant:index }
+gest_stages_etudiant_EtudiantConsulter:
+    pattern:  /etudiant/consulter
+    defaults: { _controller: gestStagesEtudiantBundle:Etudiant:EtudiantConsulter }
+gest_stages_etudiant_EtudiantRechercher:
+    pattern:  /etudiant/rechercher/{name}
+    defaults: { _controller: gestStagesEtudiantBundle:Etudiant:EtudiantRechercher }
+gest_stages_etudiant_EtudiantConnexion:
+    pattern:  /etudiant/connexion
+    defaults: { _controller: gestStagesEtudiantBundle:Etudiant:EtudiantConnexion }
+gest_stages_etudiant_EtudiantModifier:
+    pattern:  /etudiant/modifier/{id}
+    defaults: { _controller: gestStagesEtudiantBundle:Etudiant:EtudiantModifier }
+    requirements:
+        id: \d+
+gest_stages_etudiant_EtudiantAjouter:
+    pattern:  /etudiant/ajouter
+    defaults: { _controller: gestStagesEtudiantBundle:Etudiant:EtudiantAjouter }
+gest_stages_etudiant_EtudiantAjouterSection:
+    pattern:  /etudiant/ajoutersection
+    defaults: { _controller: gestStagesEtudiantBundle:Etudiant:ajouterSection }

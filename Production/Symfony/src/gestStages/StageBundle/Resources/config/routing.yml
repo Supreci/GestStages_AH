@@ -1,0 +1,28 @@
+gest_stages_stage_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: gestStagesStageBundle:Default:index }
+gest_stages_stage_StageConsulter:
+    pattern:  /stage/consulter
+    defaults: { _controller: gestStagesStageBundle:Stage:StageConsulter }
+    requirements:
+        id: \d+
+gest_stages_stage_StageRechercher:
+    pattern:  /stage/rechercher/{parametres}
+    defaults: { _controller: gestStagesStageBundle:Stage:StageRechercher }
+gest_stages_stage_StageModifier:
+    pattern:  /stage/modifier/{id}
+    defaults: { _controller: gestStagesStageBundle:Stage:StageModifier }
+    requirements:
+        id: \d+
+gest_stages_stage_StageAjouter:
+    pattern:  /stage/ajouter
+    defaults: { _controller: gestStagesStageBundle:Stage:StageAjouter }
+gest_stages_etudiant_EtudiantModifier:
+    pattern:  /etudiant/modifier
+    defaults: { _controller: gestStagesEtudiantBundle:Etudiant:EtudiantModifier }
+gest_stages_stage_ajtEntreprise:
+    pattern:  /entreprise/ajouter
+    defaults: { _controller: gestStagesStageBundle:Stage:EntrepriseAjouter }
+gest_stages_stage_consultEntreprise:
+    pattern:  /entreprise/consulter
+    defaults: { _controller: gestStagesStageBundle:Stage:EntrepriseConsulter }

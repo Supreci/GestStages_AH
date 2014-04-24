@@ -1,0 +1,12 @@
+{# src/gestStage/EtudiantBundle/Resources/views/Etudiant/ajouterEtudiant.html.twig #}
+
+<h3>Formulaire de etudiant</h3>
+ 
+<div class="well">
+  <form method="post" {{ form_enctype(form) }}>
+  
+	{{ form_widget(form) }}
+
+    <input type="submit" class="btn btn-primary" />
+  </form>
+</div>

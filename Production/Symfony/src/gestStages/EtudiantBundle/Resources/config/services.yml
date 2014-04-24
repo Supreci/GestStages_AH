@@ -1,0 +1,7 @@
+parameters:
+#    gest_stages_etudiant.example.class: gestStages\EtudiantBundle\Example
+
+services:
+#    gest_stages_etudiant.example:
+#        class: %gest_stages_etudiant.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,21 @@
+{% extends "::layout.html.twig" %}
+{% block body %}
+	<div class="consulter">
+		<table border = '1'>
+		<legend>Liste des entreprises</legend>
+			<tr>
+				<th>N&deg; de SIRET</th>
+				<th>Raison sociale</th>
+				<th>Activit&eacute; principale</th>
+				<th>Adresse</th>
+				{% for entreprise in entreprises %}
+				<tr>
+					<td>{{ entreprise.numSiret }}</td>
+					<td>{{ entreprise.raisonSociale }}</td>
+					<td></td>
+					<td>{{ entreprise.rue }} </br> {{ entreprise.codePostal }} {{ entreprise.ville }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}
